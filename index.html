@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <link rel="stylesheet" href="style.css"> 
+    <!-- // this is our styling sheet -->
+</head>
+
+<body>
+    <!-- // here is the start button for starting the game -->
+    <div class="start">
+        <button class="button">Start Quiz</button>
+    </div>
+
+    <!-- // this the rules section for showing rules of the game -->
+    <div class="rules">
+        <header>
+            <h3>Rules for game before starting</h3>
+        </header>
+        <ul>
+            <li> You will have only <span>15 seconds</span> per each question.</li>
+            <li> Once you select your answer, it can't be undone.</li>
+            <li> You can't select any option once time goes off.</li>
+            <li> You can't exit from the Quiz while you're playing.</li>
+            <li> You'll get points on the basis of your correct answers.</li>
+        </ul>
+        <div class="inButton"><button class="button">Next</button></div>
+    </div>
+
+    <!-- // this is the box in which we show time, question number, question and as well as option for the question  -->
+    <div class="quiz-app">
+        <header>
+            <p class="queNo">Ques No.: <span></span></p>
+            <p class="timer">Time Left: <span></span></p>
+        </header>
+        <section>
+            <div class="que">Que: <span>This is our frist question</span></div>
+            // here we give option class to all option and option number so that we can put option value by js easily
+            <div class="option option1"><span>.</span></div>
+            <div class="option option2"><span>.</span></div>
+            <div class="option option3"><span>.</span></div>
+            <div class="option option4"><span>.</span></div>
+        </section>
+        <div class="inButton"><button class="button">Next Que</button></div>
+    </div>
+
+    <!-- // this is a result box which show result for the quiz  -->
+    <div class="result">
+        <i class="fa-solid fa-crown"></i>
+        <p>Hurry! You completed the quiz</p>
+        <p class="mark">You get <span class="correct"></span> out of <span class="total"></span></p>
+        <a href=""><button class="button">Replay Again</button></a>
+    </div>
+
+    
+    <script src="https://kit.fontawesome.com/1b014621ce.js" crossorigin="anonymous"></script> 
+    <!-- // this the font awesome link to add icon in game -->
+    <script src="script.js"></script> 
+    <!-- // this is our script -->
+</body>
+
+</html>

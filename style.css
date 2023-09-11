@@ -1,0 +1,254 @@
+/* // this is google font link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --skin-color: #c334eb;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--skin-color);
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.start,
+.rules,
+.quiz-app,
+.result {
+    position: absolute;
+    transform: scale(0.9);
+}
+
+.start {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease-in-out;
+    /* transform: translate(-50%, -50%) scale(0.9); */
+}
+
+.start.hide {
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: scale(1);
+}
+
+.start .button {
+    padding: 15px 15px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--skin-color);
+    border-radius: 12px;
+    border: none;
+}
+
+.rules {
+    background-color: white;
+    padding: 0.5rem 1.2rem 1.2rem 1.2rem;
+    border-radius: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    /* transform: translate(-50%, -50%) scale(0.9); */
+}
+
+.rules.show {
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: scale(1);
+}
+
+.rules header {
+    border-bottom: 2px solid gainsboro;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.rules ul {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.rules .button {
+    background-color: white;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--skin-color);
+    border-radius: 12px;
+    margin-top: 1rem;
+    border: 2px solid var(--skin-color);
+}
+
+.quiz-app {
+    background-color: white;
+    width: 35rem;
+    /* height: 22rem; */
+    border-radius: 0.7rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    /* transform: translate(-50%, -50%) scale(0.9); */
+}
+
+.quiz-app.show {
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: scale(1);
+}
+
+.quiz-app header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid gainsboro;
+    letter-spacing: 0.1rem;
+}
+
+.quiz-app header .queNo span,
+.quiz-app header .timer span {
+    background-color: black;
+    color: white;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+}
+
+.quiz-app section {
+    /* background-color: red; */
+    padding: 1rem 1rem;
+}
+
+.quiz-app section .que {
+    font-size: 1.4rem;
+}
+
+.quiz-app section .option {
+    /* background-color: red; */
+    margin: 1rem 0;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--skin-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.quiz-app section .option:last-child {
+    margin-bottom: 0;
+}
+
+.quiz-app section .option.correct {
+    background-color: #198754;
+    color: white;
+    border: 1px solid white;
+}
+
+.quiz-app section .option.wrong {
+    background-color: #DC3545;
+    color: white;
+    border: 1px solid white;
+}
+
+.inButton {
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.quiz-app .button {
+    background-color: white;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--skin-color);
+    border-radius: 12px;
+    margin-top: 1rem;
+    border: 2px solid var(--skin-color);
+    margin-bottom: 1rem;
+}
+
+.result {
+    background-color: white;
+    width: 25rem;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    /* transform: translate(-50%, -50%) scale(0.9); */
+}
+
+.result.show {
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: scale(1);
+}
+
+.result i {
+    font-size: 5rem;
+    color: var(--skin-color);
+}
+
+.result p.mark span {
+    font-weight: 600;
+}
+
+.result .button {
+    background-color: white;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--skin-color);
+    border-radius: 12px;
+    margin-top: 1rem;
+    border: 2px solid var(--skin-color);
+    margin-bottom: 1rem;   
+}
+
+@media screen and (max-width: 654px) {
+    .quiz-app {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .start {
+        transform: translate(1vw, 1vh) scale(0.9);
+    }
+
+    .quiz-app {
+        width: 100%;
+    }
+}
